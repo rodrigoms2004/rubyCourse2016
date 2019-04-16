@@ -1,0 +1,366 @@
+
+nome: Rodrigo Moraes Silveira_______________________________________________
+04/10/2015
+
+INICIO 18H12
+FIM	   21H12
+
+PROVA FINALIZADA AS 21H12
+QUESTÃO REGEX NÚMERO 4 NÃO FEITA
+
+#------------------------------------------------------------------------------
+# String
+#------------------------------------------------------------------------------
+1) tendo a string "joao" gere a string "Joao" (primeira letra maiuscula)
+irb(main):002:0> "joao".capitalize
+=> "Joao"
+
+2) tendo a string "world" gere a string "hello world"
+irb(main):006:0> "world".gsub("w",'hello w')
+=> "hello world"
+
+
+3) tendo a string "hello     world" (5 espacos em branco)  gere a string
+"hello world" (1 espacos em branco)
+irb(main):015:0> "hello     world".gsub("     ", " ")
+=> "hello world"
+ou
+irb(main):016:0> "world".prepend("hello ")
+=> "hello world"
+
+
+4) com a string "CANCELADO" gere a string "*****CANCELADO******"
+irb(main):022:0> "CANCELADO".center(19, '*')
+=> "*****CANCELADO*****"
+
+
+5) tendo a string "aBrAcAdAbRa" gere a string "AbRaCaDaBrA"
+irb(main):055:0> "aBrAcAdAbRa".gsub(/[abcdrABCDR]/, 'a' => 'A', 'b' => 'B', 'c' => 'C', 'd' => 'D', 'r' => 'R', 'A' => 'a', 'B' => 'b', 'C' => 'c', 'D' => 'd', 'R' => 'r')
+=> "AbRaCaDaBrA"
+
+
+6) retorne true ou false se "abracadabra" tem a string "cada"
+irb(main):058:0> "abracadabra".include?"cada"
+=> true
+
+7) retorne true ou false caso a string "foto.jpg" termine com "jpg"
+irb(main):061:0> "foto.jpg".include?"jpg"
+=> true
+
+
+8) tendo a string " teste " gere a string "teste"
+irb(main):065:0> " teste ".strip
+=> "teste"
+
+9) tendo a string "teste" gere a string "etset"
+irb(main):066:0> "teste".reverse
+=> "etset"
+
+10) tendo a string "a" gere a string "g" a partir dela
+irb(main):068:0> "a".gsub("a", "g")
+=> "g"
+
+FINALIZADO AS 18H50
+
+#------------------------------------------------------------------------------
+# Immediate Values
+#------------------------------------------------------------------------------
+1) Qual a vantagem de um objeto ser immediate value ?
+Um immediate value permite manter o mesmo object_id do valor armazenado.
+Os tipos nil, true/false, floar e integer estão associados aos seus valores imediatos. Em vez armazenarem um "ponteiro" com uma referencia ao valor do objeto, essas variáveis armazenam o valor diretamenteç
+irb(main):092:0> false.object_id
+=> 0
+irb(main):093:0> a = false
+=> false
+irb(main):094:0> a.object_id
+=> 0
+irb(main):095:0> a = 10
+=> 10
+irb(main):096:0> a.object_id
+=> 21
+irb(main):097:0> 10.object_id
+=> 21
+
+Retirado de https://www.ruby-forum.com/topic/50305
+
+
+2) informe o object_id de nil, true, false
+irb(main):069:0> nil.object_id
+=> 8
+irb(main):070:0> true.object_id
+=> 20
+irb(main):071:0> false.object_id
+=> 0
+
+
+3) tendo a string "hoje" gere uma symbol :hoje a partir da string
+irb(main):073:0> "hoje".intern
+=> :hoje
+
+
+4) tendo a symbol :hoje gera uma string "hoje"
+irb(main):075:0> :hoje.to_s
+=> "hoje"
+irb(main):076:0> :hoje.to_s.class
+=> String
+
+
+5) crie três exemplos de nil sendo o primeiro conversão inteiro, float e string
+irb(main):081:0> nil.to_i
+=> 0
+irb(main):082:0> nil.to_f
+=> 0.0
+irb(main):083:0> nil.to_s
+=> ""
+
+FINALIZADO AS 19h05
+
+#------------------------------------------------------------------------------
+# Regex
+#------------------------------------------------------------------------------
+1) Crie uma expressão regular que valide a string:
+"Sao Paulo, 7 de setembro de 2012"
+Sendo "," e "de" obrigatorios, e o dia e ano validados como numero observando
+o tamho 2 => mes 4 => ano
+str = "Sao Paulo, 7 de setembro de 2012"
+regex = /^([A-Z][a-z]{2,25}|[A-Z][a-z]{2,25} [A-Z][a-z]{2,25})\,\ (|[1-3])[0-9]\ de\ [a-z]{0,10}\ de\ [0-9]{4}$/
+p regex === str
+QUESTÃO FINALIZADA AS 21H06
+
+2) tendo a string "o gato foi a traz do rato que ao final fugiu do pato"
+altere os elementos gato, pato e rato para "---" (três traços)
+
+str = "o gato foi a traz do rato que ao final fugiu do pato"
+str.gsub!(/.ato/, "---")
+p str
+
+
+3) tendo a string "carlos@[1]adelson@[2]joao@[3]silva@[4]antonio@[5]vieira"
+gere array contendo %w(carlos adelson joao silva antonio vieira)
+
+str = "carlos@[1]adelson@[2]joao@[3]silva@[4]antonio@[5]vieira"
+p str.split(/@\[[1-5]\]/)
+
+
+4) tendo a string "Sao Paulo, 7 de setembro de 2012" gere o array array:
+["7", "2012"]
+???????????????????
+
+5) tendo a string "o codigo do produto e AB_ABCD_123456" gere gere a string
+"AB_ABCD_123456"
+
+irb(main):190:0> a
+=> "o codigo do produto e AB_ABCD_123456"
+irb(main):191:0> a[/.[A-Z]{2}_[A-Z]{4}_[1-9]{6}$/].lstrip
+=> "AB_ABCD_123456"
+
+FINALIZADO AS 20H02
+
+#------------------------------------------------------------------------------
+# Array
+#------------------------------------------------------------------------------
+1) crie um array vazio, após, adicione um elemento ao array, e outro e um
+terceiro. Ao final exclue o primeiro elemento do array -- sem -- indicar a
+posição zero dele.
+irb(main):002:0> list = Array.new
+=> []
+irb(main):003:0> list
+=> []
+irb(main):004:0> list << 1
+=> [1]
+irb(main):005:0> list << 2
+=> [1, 2]
+irb(main):006:0> list << 3
+=> [1, 2, 3]
+irb(main):007:0> list.shift
+=> 1
+irb(main):008:0> list
+=> [2, 3]
+
+
+2) crie um array vazio, após, adicione um elemento ao array, e outro e um
+terceiro. Ao final exclue o ultimo elemento do array -- sem -- indicar a
+posição zero dele.
+irb(main):009:0> list = Array.new
+=> []
+irb(main):010:0> list << 1
+=> [1]
+irb(main):011:0> list << false
+=> [1, false]
+irb(main):012:0> list << "teste"
+=> [1, false, "teste"]
+irb(main):013:0> list.pop
+=> "teste"
+irb(main):014:0> list
+=> [1, false]
+
+
+3) crie um array vazio, após, adicione um elemento ao array, e outro e um
+terceiro. Ao final exclue o elemento do meio podendo indicar a
+posição "1".
+irb(main):020:0> list = Array.new
+=> []
+irb(main):021:0> list << "teste"
+=> ["teste"]
+irb(main):022:0> list << 4.5
+=> ["teste", 4.5]
+irb(main):023:0> list << true
+=> ["teste", 4.5, true]
+irb(main):024:0> list.delete_at(1)
+=> 4.5
+irb(main):025:0> list
+=> ["teste", true]
+
+
+4) Cria um array vazio. Após adicione 3 elementos ao array sendo que ele serão
+adicionados não ao final, mas todos eles adicionados no inicio do array
+irb(main):026:0> list = Array.new
+=> []
+irb(main):027:0> list.unshift(10)
+=> [10]
+irb(main):028:0> list.unshift("teste")
+=> ["teste", 10]
+irb(main):029:0> list.unshift(false)
+=> [false, "teste", 10]
+
+5) Crie um array utilizando seu construtor com 10 elementos, onde o valor
+default seja zero. Caso seja chamado o indice de 0 a 9 deve retornar zero.
+irb(main):031:0> list = Array.new(10,0)
+=> [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+6) Dado o array, [1, nil, 2, nil, 3, nil] gere um novo array sem os valores
+nil
+irb(main):034:0> a
+=> [1, nil, 2, nil, 3, nil]
+irb(main):035:0> a.reject{|v| v.nil?}
+=> [1, 2, 3]
+
+7) Tendo o array [1, 2, 3], e o array [4, 5, 6] gere um novo array contendo
+os dois valores
+irb(main):041:0> a
+=> [1, 2, 3]
+irb(main):042:0> b
+=> [4, 5, 6]
+irb(main):043:0> a + b
+=> [1, 2, 3, 4, 5, 6]
+
+8) tendo o array [1, 2, 3, 4] e o array [4, 5, 6], gere um novo array contendo
+os dois valores porém excluindo valores repetidos
+irb(main):050:0> a
+=> [1, 2, 3, 4]
+irb(main):051:0> b
+=> [4, 5, 6]
+irb(main):052:0> (a + b).uniq
+=> [1, 2, 3, 4, 5, 6]
+
+9) tendo o array [1, 2, 3, 4, 5] e o array [4, 5, 6, 7], gere um novo array contendo
+somente os valores duplicados
+irb(main):002:0> [1, 2, 3, 4, 5] & [4, 5, 6, 7]
+=> [4, 5]
+
+10) tendo o array, [8, 1, 3, 7, 0, 6, 2, 9, 4, 5] gere um novo array ordenado
+do maior para o menor isto é 9 => 0
+irb(main):005:0> [8, 1, 3, 7, 0, 6, 2, 9, 4, 5].sort.reverse
+=> [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
+
+FINALIZADO AS 20H30
+
+#------------------------------------------------------------------------------
+# Hash
+#------------------------------------------------------------------------------
+1) Tendo a hash {:um => 1, :dois => 2, :tres => 3} retorne o valor 2
+irb(main):015:0> h
+=> {:um=>1, :dois=>2, :tres=>3}
+irb(main):016:0> h[:dois]
+=> 2
+
+2) Tendo a hash {:um => 1, :dois => 2, :tres => 3} retorne true ou false se
+ela tem a chave :um
+
+3) Tendo a hash {:um => 1, :dois => 2, :tres => 3} retorne true ou false se
+ela tem o valor 1
+irb(main):019:0> h.has_value?(1)
+=> true
+
+4) Tendo a hash {:um => 1, :dois => 2, :tres => 3} retorne o numero de elementos
+irb(main):021:0> h.size
+=> 3
+
+5) Tendo a hash {:um => 1, :dois => 2, :tres => 3} gere dois arrays o
+primeiro: [:um, :dois, :tres] e o segundo [1, 2, 3]
+irb(main):023:0> h.keys
+=> [:um, :dois, :tres]
+irb(main):024:0> h.values
+=> [1, 2, 3]
+
+FINALIZADO AS 20H38
+
+#------------------------------------------------------------------------------
+# Range
+#------------------------------------------------------------------------------
+1) Tendo a range ("a".."z") retorne true ou false se "g" esta incluida no range
+irb(main):029:0> ("a".."z").include?("g")
+=> true
+
+
+2) Tendo a range ("a".."z") retorne o primeiro elemento da range
+irb(main):030:0> ("a".."z").first
+=> "a"
+
+
+3) Tendo a range ("a".."z") retorne o ultimo elemento da range
+irb(main):031:0> ("a".."z").last
+=> "z"
+
+
+4) Tendo a range ("a".."z") retorne o array ["a", "b", "c", "d", "e"]
+irb(main):034:0> ("a".."z").to_a.select{|v| v < "f"}
+=> ["a", "b", "c", "d", "e"]
+
+
+5) Tendo a range ("a".."z") retorne o array ["v", "w", "x", "y", "z"] 
+irb(main):037:0> ("a".."z").to_a.select{|v| v >= "v"}
+=> ["v", "w", "x", "y", "z"]
+
+FINALIZADO AS 20H44
+
+#------------------------------------------------------------------------------
+# Enumerable
+#------------------------------------------------------------------------------
+1) Tendo um array %w(carlos adelson joao silva antonio vieira)
+retorne o primeiro elemento que comece com a letra "a"
+irb(main):046:0> %w(carlos adelson joao silva antonio vieira).select {|v| v.start_with?"a"}.first
+=> "adelson"
+
+
+2) Tendo o array %w(carlos adelson joao silva antonio vieira) gere um novo
+array com a primeira letra em maiuscula
+irb(main):059:0> %w(carlos adelson joao silva antonio vieira).map {|v| v.capitalize}
+=> ["Carlos", "Adelson", "Joao", "Silva", "Antonio", "Vieira"]
+
+
+3) tendo o array [2, 4, 6] e o array [1, 2, 4, 6] de true ou false caso todos os elementos do array seja todos pares
+irb(main):063:0> a
+=> [1, 4, 6]
+irb(main):064:0> b
+=> [1, 2, 4, 6]
+irb(main):065:0> a.map {|v| v.even?}
+=> [false, true, true]
+irb(main):066:0> b.map {|v| v.even?}
+=> [false, true, true, true]
+
+
+4) tendo o array [2, 4, 6] e o array [1, 2, 4, 6] de true ou false caso um dos 
+elementos do array seja impar
+irb(main):067:0> a.map {|v| v.odd?}
+=> [true, false, false]
+irb(main):068:0> b.map {|v| v.odd?}
+=> [true, false, false, false]
+ 
+ 
+5) Tendo o array [1, 2, 3, 4, 5] de o total da soma de todos os elementos
+irb(main):070:0> a.inject(0) {|total, valor| total + valor}
+=> 15
+
+FINALIZADO AS 20H55
+

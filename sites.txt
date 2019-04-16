@@ -1,0 +1,37 @@
+Expressões regulares
+http://www.tutorialspoint.com/ruby/ruby_regular_expressions.htm
+
+Rubular
+http://rubular.com/
+
+Ruby Docs
+http://ruby-doc.org
+
+CISCO e Ruby
+https://developer.cisco.com/site/prime-infrastructure/documents/client-examples/ruby-examples/#
+http://stackoverflow.com/questions/16343465/connect-to-a-cisco-switch-with-ssh-and-ruby
+
+Livro Ruby
+http://chrismaloney.org/notes_s/Ruby%20on%20Rails_/ProgrammingRuby-4thEd.pdf
+
+LUA
+http://www.tutorialspoint.com/lua/
+https://mewanthawrites.wordpress.com/2015/05/09/fatal-error-readlinereadline-h-no-such-file-or-directory/
+
+SMALLTALK
+http://pharo.org/
+
+MVC
+http://www.martinfowler.com/eaaCatalog/activeRecord.html
+
+RAILS 2.3
+http://guias.rubyonrails.com.br.s3-website-us-east-1.amazonaws.com/association_basics.html#
+http://guias.rubyonrails.com.br.s3-website-us-east-1.amazonaws.com/
+http://guides.rubyonrails.org/v2.3.11/
+
+NET
+http://docs.ruby-lang.org/en/2.0.0/Net/HTTP.html
+
+RVM
+http://www.webupd8.org/2014/11/how-to-install-rvm-ruby-version-manager.html
+https://rvm.io/rvm/basics

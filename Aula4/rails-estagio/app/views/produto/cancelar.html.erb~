@@ -1,0 +1,13 @@
+<html>
+<h1> Digite o código do produto para cancelar </h1>
+
+<form>
+  COdigo:<br>
+  <input type="text" name="codigoproduto" value="ruby">
+  <br>
+  <br><br>
+  <input type="submit" value="Cancelar">
+</form>
+</html>
+
+

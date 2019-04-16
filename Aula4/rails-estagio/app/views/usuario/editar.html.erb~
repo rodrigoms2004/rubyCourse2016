@@ -1,0 +1,23 @@
+<html> 
+<body> 
+<h1> EDITAR </h1> 
+
+<form action = '/usuario/update'>
+  <input type="hidden" name="id" value="<%= @usuario.id -%>">
+  Nome:
+  <input type="text" name="nome" value="<%= @usuario.nome -%>">
+  
+  Observação:
+  <input type="text" name="observacao" value="<%= @usuario.observacao -%>">
+  
+  Data Nascimento:
+  <input type="text" name="dataNascimento" value="<%= @usuario.data_nascimento -%>">
+  <br>
+  <br>
+  <input type='submit'/>
+</form>
+
+
+
+</body> 
+</html>

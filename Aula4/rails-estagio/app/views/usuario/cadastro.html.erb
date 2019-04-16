@@ -1,0 +1,33 @@
+<html> 
+
+<% if @erro -%>
+	<% @erro.each do |texto| -%>
+		<%= texto -%>
+	<% end -%>
+	<br> <br>
+<% end -%>
+
+
+
+<h3> 
+CADASTRO 
+</h3> 
+
+<form action = '/usuario/save'>
+  <input type="hidden" name="id" value="<%= @usuario.id -%>">
+  Nome:
+  <input type="text" name="nome" value="<%= @usuario.nome -%>">
+  
+  Observação:
+  <input type="text" name="observacao" value="<%= @usuario.observacao -%>">
+  
+  Data Nascimento:
+  <input type="text" name="data_nascimento" value="<%= @usuario.data_nascimento -%>">
+  <br>
+  <br>
+  <input type='submit'/>
+</form>
+
+
+
+</html>

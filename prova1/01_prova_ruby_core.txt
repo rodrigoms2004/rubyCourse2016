@@ -1,0 +1,142 @@
+
+nome:_________________________________________________________________________
+
+
+#------------------------------------------------------------------------------
+# String
+#------------------------------------------------------------------------------
+1) tendo a string "joao" gere a string "Joao" (primeira letra maiuscula)
+
+2) tendo a string "world" gere a string "hello world"
+
+3) tendo a string "hello     world" (5 espacos em branco)  gere a string
+"hello world" (1 espacos em branco)
+
+4) com a string "CANCELADO" gere a string "*****CANCELADO******"
+
+5) tendo a string "aBrAcAdAbRa" gere a string "AbRaCaDaBrA"
+
+6) retorne true ou false se "abracadabra" tem a string "cada"
+
+7) retorne true ou false caso a string "foto.jpg" termine com "jpg"
+
+8) tendo a string " teste " gere a string "teste"
+
+9) tendo a string "teste" gere a string "etset"
+
+10) tendo a string "a" gere a string "g" a partir dela
+
+#------------------------------------------------------------------------------
+# Immediate Values
+#------------------------------------------------------------------------------
+1) Qual a vantagem de um objeto ser immediate value ?
+
+2) informe o object_id de nil, true, false
+
+3) tendo a string "hoje" gere uma symbol :hoje a partir da string
+
+4) tendo a symbol :hoje gera uma string "hoje"
+
+5) crie três exemplos de nil sendo o primeiro conversão inteiro, float e string
+
+#------------------------------------------------------------------------------
+# Regex
+#------------------------------------------------------------------------------
+1) Crie uma expressão regular que valide a string:
+"Sao Paulo, 7 de setembro de 2012"
+Sendo "," e "de" obrigatorios, e o dia e ano validados como numero observando
+o tamho 2 => mes 4 => ano
+
+2) tendo a string "o gato foi a traz do rato que ao final fugiu do pato"
+altere os elementos gato, pato e rato para "---" (três traços)
+
+3) tendo a string "carlos@[1]adelson@[2]joao@[3]silva@[4]antonio@[5]vieira"
+gere array contendo %w(carlos adelson joao silva antonio vieira)
+
+4) tendo a string "Sao Paulo, 7 de setembro de 2012" gere o array array:
+["7", "2012"]
+
+5) tendo a string "o codigo do produto e AB_ABCD_123456" gere gere a string
+"AB_ABCD_123456"
+
+#------------------------------------------------------------------------------
+# Array
+#------------------------------------------------------------------------------
+1) crie um array vazio, após, adicione um elemento ao array, e outro e um
+terceiro. Ao final exclue o primeiro elemento do array -- sem -- indicar a
+posição zero dele.
+
+2) crie um array vazio, após, adicione um elemento ao array, e outro e um
+terceiro. Ao final exclue o ultimo elemento do array -- sem -- indicar a
+posição zero dele.
+
+3) crie um array vazio, após, adicione um elemento ao array, e outro e um
+terceiro. Ao final exclue o elemento do meio podendo indicar a
+posição "1".
+
+4) Cria um array vazio. Após adicione 3 elementos ao array sendo que ele serão
+adicionados não ao final, mas todos eles adicionados no inicio do array
+
+5) Crie um array utilizando seu construtor com 10 elementos, onde o valor
+default seja zero. Caso seja chamado o indice de 0 a 9 deve retornar zero.
+
+6) Dado o array, [1, nil, 2, nil, 3, nil] gere um novo array sem os valores
+nil
+
+7) Tendo o array [1, 2, 3], e o array [4, 5, 6] gere um novo array contendo
+os dois valores
+
+8) tendo o array [1, 2, 3, 4] e o array [4, 5, 6], gere um novo array contendo
+os dois valores porém excluindo valores repetidos
+
+9) tendo o array [1, 2, 3, 4, 5] e o array [4, 5, 6, 7], gere um novo array contendo
+somente os valores duplicados
+
+10) tendo o array, [8, 1, 3, 7, 0, 6, 2, 9, 4, 5] gere um novo array ordenado
+do maior para o menor isto é 9 => 0
+
+#------------------------------------------------------------------------------
+# Hash
+#------------------------------------------------------------------------------
+1) Tendo a hash {:um => 1, :dois => 2, :tres => 3} retorne o valor 2
+
+2) Tendo a hash {:um => 1, :dois => 2, :tres => 3} retorne true ou false se
+ela tem a chave :um
+
+3) Tendo a hash {:um => 1, :dois => 2, :tres => 3} retorne true ou false se
+ela tem o valor 1
+
+4) Tendo a hash {:um => 1, :dois => 2, :tres => 3} retorne o numero de elementos
+
+5) Tendo a hash {:um => 1, :dois => 2, :tres => 3} gere dois arrays o
+primeiro: [:um, :dois, :tres] e o segundo [1, 2, 3]
+
+#------------------------------------------------------------------------------
+# Range
+#------------------------------------------------------------------------------
+1) Tendo a range ("a".."z") retorne true ou false se "g" esta incluida no range
+
+2) Tendo a range ("a".."z") retorne o primeiro elemento da range
+
+3) Tendo a range ("a".."z") retorne o ultimo elemento da range
+
+4) Tendo a range ("a".."z") retorne o array ["a", "b", "c", "d", "e"]
+
+5) Tendo a range ("a".."z") retorne o array ["v", "w", "x", "y", "z"] 
+
+#------------------------------------------------------------------------------
+# Enumerable
+#------------------------------------------------------------------------------
+1) Tendo um array %w(carlos adelson joao silva antonio vieira)
+retorne o primeiro elemento que comece com a letra "a"
+
+2) Tendo o array %w(carlos adelson joao silva antonio vieira) gere um novo
+array com a primeira letra em maiuscula
+
+3) tendo o array [2, 4, 6] e o array [1, 2, 4, 6] de true ou false caso todos os 
+elementos do array seja todos pares
+
+4) tendo o array [2, 4, 6] e o array [1, 2, 4, 6] de true ou false caso um dos 
+elementos do array seja impar
+ 
+5) Tendo o array [1, 2, 3, 4, 5] de o total da soma de todos os elementos

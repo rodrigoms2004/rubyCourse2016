@@ -1,0 +1,13 @@
+--2015-10-05 13:13:57--  http://distfiles.objectdata.com.br/estagio/rails-estagio.zip
+Resolving distfiles.objectdata.com.br (distfiles.objectdata.com.br)... 189.78.153.40
+Connecting to distfiles.objectdata.com.br (distfiles.objectdata.com.br)|189.78.153.40|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 122010 (119K) [application/zip]
+Saving to: ‘rails-estagio.zip.1’
+
+     0K .......... .......... .......... .......... .......... 41%  514K 0s
+    50K .......... .......... .......... .......... .......... 83%  789K 0s
+   100K .......... .........                                  100%  896K=0,2s
+
+2015-10-05 13:13:57 (655 KB/s) - ‘rails-estagio.zip.1’ saved [122010/122010]
+

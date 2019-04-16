@@ -1,0 +1,14 @@
+Expressões regulares
+http://www.tutorialspoint.com/ruby/ruby_regular_expressions.htm
+
+Rubular
+http://rubular.com/
+
+CISCO e Ruby
+https://developer.cisco.com/site/prime-infrastructure/documents/client-examples/ruby-examples/#
+http://stackoverflow.com/questions/16343465/connect-to-a-cisco-switch-with-ssh-and-ruby
+
+Livro Ruby
+http://chrismaloney.org/notes_s/Ruby%20on%20Rails_/ProgrammingRuby-4thEd.pdf
+
+
